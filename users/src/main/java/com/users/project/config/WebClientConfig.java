@@ -12,10 +12,6 @@ public class WebClientConfig {
     @Autowired
     private LoadBalancedExchangeFilterFunction filterFunction;
 
-    public WebClientConfig(LoadBalancedExchangeFilterFunction filterFunction) {
-        this.filterFunction = filterFunction;
-    }
-
     @Bean
     public WebClient.Builder webClientBuilder() {
         return WebClient.builder().filter(filterFunction);
