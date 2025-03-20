@@ -23,14 +23,14 @@ spring:
           enabled: true
       routes:
         - id: blogs
-          uri: lb://BLOGS #eureka website se liya gya hai, waha listed hoga
+          uri: lb://BLOGS #eureka website (8060) se liya gya hai, waha listed hoga
           predicates:
             - Path=/api/blogs/**
         - id: products
-          uri: lb://PRODUCTS  #eureka website se liya gya hai, waha listed hoga
+          uri: lb://PRODUCTS  #eureka website (8060) se liya gya hai, waha listed hoga
           predicates:
             - Path=/api/products/**
         - id: users
-          uri: lb://USERS  #eureka website se liya gya hai, waha listed hoga
+          uri: lb://USERS  #eureka website (8060) se liya gya hai, waha listed hoga
           predicates:
             - Path=/api/users/**
